@@ -25,8 +25,8 @@ app.use(helmet());
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin, Vercel deployments, or matching CORS_ORIGIN
-      if (!origin || process.env.CORS_ORIGIN === '*' || !process.env.CORS_ORIGIN || origin.includes('vercel.app') || origin.includes('localhost')) {
+      // Allow requests with no origin, cloud deployments (Render/Vercel), or matching CORS_ORIGIN
+      if (!origin || process.env.CORS_ORIGIN === '*' || !process.env.CORS_ORIGIN || origin.includes('onrender.com') || origin.includes('vercel.app') || origin.includes('localhost')) {
         callback(null, true);
       } else {
         callback(null, true);
