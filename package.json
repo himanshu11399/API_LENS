@@ -1,0 +1,8 @@
+{
+  "name": "apilens-root",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node run-all.js"
+  }
+}
