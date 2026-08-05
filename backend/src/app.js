@@ -49,8 +49,8 @@ if (process.env.NODE_ENV === "development") {
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
-app.get(["/api/health", "/health"], (req, res) => {
-  res.status(200).json({ status: "ok", message: "Api is working Fine", timestamp: new Date().toISOString() });
+app.get(["/", "/api", "/api/health", "/health"], (req, res) => {
+  res.status(200).json({ status: "ok", message: "APILens Backend API is running", timestamp: new Date().toISOString() });
 });
 
 // Apply rate limiting to API routes
